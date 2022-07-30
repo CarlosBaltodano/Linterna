@@ -1,0 +1,41 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:t="clr-namespace:Linterna.Triggers"
+             x:Class="Linterna.Vistas.LinternaPage">
+    <Grid BackgroundColor="#1B2028"
+          RowDefinitions="200,*,140">
+        <Label Text="Dios es la luz en la oscuridad"
+               Grid.Row="0"
+                   FontSize="50"
+                   TextColor="#6C7273"
+                   HorizontalOptions="Center"
+                   FontAttributes="Bold"
+                   VerticalOptions="EndAndExpand"
+                   HorizontalTextAlignment="Center">
+                <Label.Triggers>
+                    <MultiTrigger TargetType="Label">
+                        <MultiTrigger.Conditions>
+                            <BindingCondition Binding="{Binding Encendido}" Value="True"/>
+                        </MultiTrigger.Conditions>
+                        <MultiTrigger.EnterActions >
+                            <t:Tlabel Indicador="True" />
+                        </MultiTrigger.EnterActions>
+                        <MultiTrigger.ExitActions>
+                            <t:Tlabel Indicador="False" />
+                        </MultiTrigger.ExitActions>
+                    </MultiTrigger>
+                </Label.Triggers>
+            </Label>
+            <Image Source="{Binding OnOffFoco}"
+               Grid.Row="1"
+               Margin="20"/>
+        <Image Source="{Binding OnOffIcon}"
+               Grid.Row="2"
+               Margin="20">
+            <Image.GestureRecognizers>
+                <TapGestureRecognizer Command="{Binding OnOffcommand}" />
+            </Image.GestureRecognizers>
+        </Image>
+    </Grid>
+</ContentPage>
