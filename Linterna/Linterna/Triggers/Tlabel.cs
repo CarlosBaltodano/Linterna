@@ -14,7 +14,7 @@ namespace Linterna.Triggers
             if (Indicador)
             {
                 sender.TextColor = Color.FromHex("#FFE566");
-                sender.Text = "Y se hizo la luz";
+                sender.Text = "Linterna Encendida";
                 await Task.WhenAll(sender.FadeTo(0.5, 600, Easing.BounceOut),
                     sender.FadeTo(0.5, 600, Easing.BounceOut),
                     sender.TranslateTo(0, -40, 700, Easing.BounceOut));
@@ -22,7 +22,7 @@ namespace Linterna.Triggers
             else
             {
                 sender.TextColor = Color.FromHex("#6C7273");
-                sender.Text = "Dios es luz en la Oscuridad";
+                sender.Text = "Linterna Apagada";
                 await Task.WhenAll(
                     sender.FadeTo(0.5, 600, Easing.BounceOut),
                     sender.FadeTo(1, 600, Easing.BounceOut),

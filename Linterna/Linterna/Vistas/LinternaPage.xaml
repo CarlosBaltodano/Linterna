@@ -5,7 +5,7 @@
              x:Class="Linterna.Vistas.LinternaPage">
     <Grid BackgroundColor="#1B2028"
           RowDefinitions="200,*,140">
-        <Label Text="Dios es la luz en la oscuridad"
+        <Label Text="Linterna Apagada"
                Grid.Row="0"
                    FontSize="50"
                    TextColor="#6C7273"
