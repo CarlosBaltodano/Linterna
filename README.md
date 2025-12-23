@@ -1,3 +1,3 @@
-# linterna
+# Linterna
+App de Linterna hecho en Flutter
 
-A new Flutter project.
